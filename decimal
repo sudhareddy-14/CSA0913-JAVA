@@ -1,0 +1,16 @@
+import java. util.*;
+class decimal {
+    public static void main(String[] args) {
+        int dec=0, rem, bin, i = 0;
+	Scanner s=new Scanner(System.in);
+	bin=s.nextInt();
+        while (bin != 0) {
+            rem = bin % 10;
+            dec += rem * Math.pow(2,i);
+            bin /= 10;
+	    ++i;
+        }
+
+        System.out.println("Output = " + dec);
+    }
+}

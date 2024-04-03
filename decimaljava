@@ -1,0 +1,16 @@
+import java. util.*;
+class binary {
+    public static void main(String[] args) {
+        int dec, rem, bin = 0, i = 0;
+	Scanner s=new Scanner(System.in);
+	dec=s.nextInt();
+        while (dec != 0) {
+            rem = dec % 2;
+            bin += rem * Math.pow(10,i);
+            dec /= 2;
+            ++i;
+        }
+
+        System.out.println("Output = " + bin);
+    }
+}

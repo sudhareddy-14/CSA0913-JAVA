@@ -1,0 +1,24 @@
+import java.util.*;
+
+class Factors {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Given number: ");
+        int num = scanner.nextInt();
+        scanner.close();
+
+        int count = 0;
+        for (int i = 1; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                // If 'i' divides 'num' without leaving a remainder, count it as a factor
+                count++;
+                // If the quotient is different from the divisor, count it as a factor too
+                if (i != num / i) {
+                    count++;
+                }
+            }
+        }
+
+        System.out.println("Number of factors = " + count);
+    }
+}
